@@ -1,14 +1,38 @@
 
 #include <iostream>
 #include <vector>
+
+using namespace std;
+
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    int n; 
-    if (!(std::cin >> n)) return 0;
-    std::vector<long long> a(n);
-    for (int i=0;i<n;i++) std::cin >> a[i];
-    long long x; std::cin >> x;
-    // TODO: binary search for first index of x; print index or -1
+    int n;
+    cout << "Zadaj n: ";
+    cin >> n;
+
+    cout << "Zadaj cisla: ";
+    vector<int> a(n);
+    for (int i = 0; i < n; ++i)
+        cin >> a[i];
+
+    cout << "Zadaj x: ";
+    int x;
+    cin >> x;
+
+    int result = -1;
+    int L = 0;
+    int H = n - 1;
+    while (L <= H) {
+        int M = L + (H - L) / 2;
+        if (a[M] == x) {
+            result = M;
+            H = M - 1;
+        } else if (a[M] < x) {
+            L = M + 1;
+        } else {
+            H = M - 1;
+        }
+    }
+
+    cout << result;
     return 0;
 }

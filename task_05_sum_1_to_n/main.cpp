@@ -1,10 +1,15 @@
 
 #include <iostream>
+
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     long long n;
-    if (!(std::cin >> n)) return 0;
-    // TODO: compute sum 1..n (watch overflow; use 64-bit)
+    cout << "Zadaj n: ";
+    cin >> n;
+    long long sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+    }
+    cout << sum;
     return 0;
 }

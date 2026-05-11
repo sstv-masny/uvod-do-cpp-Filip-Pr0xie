@@ -1,10 +1,18 @@
 
 #include <iostream>
+
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    long long a,b,c;
-    if (!(std::cin >> a >> b >> c)) return 0;
-    // TODO: print the minimum of a, b, c
+    long long a, b, c;
+    cout << "Zadaj cisla a,b,c: ";
+    cin >> a >> b >> c;
+    long long min = b;
+    if (a < b) {
+        min = a;
+    }
+    if (c < b) {
+        min = c;
+    }
+    cout << min;
     return 0;
 }

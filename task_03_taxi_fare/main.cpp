@@ -1,12 +1,18 @@
 
-#include <iostream>
-#include <iomanip>
 #include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
     long long k;
-    if (!(std::cin >> k)) return 0;
-    // TODO: compute the fare as specified and print with two decimals
+    cout << "Zadaj k: ";
+    cin >> k;
+    if (k <= 2) {
+        cout << "4.00";
+    } else {
+        double temp = 4.00 + 1.50 * ceil(k - 2);
+        cout << fixed << setprecision(2) << temp;
+    }
+
     return 0;
 }
