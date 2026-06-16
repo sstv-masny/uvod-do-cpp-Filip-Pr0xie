@@ -5,7 +5,6 @@
 using namespace std;
 int main() {
     long long k;
-    cout << "Zadaj k: ";
     cin >> k;
     if (k <= 2) {
         cout << "4.00";

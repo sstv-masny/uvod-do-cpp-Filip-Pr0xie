@@ -5,11 +5,9 @@ using namespace std;
 
 int main() {
     int n = 0;
-    cout << "Zadaj n: ";
     cin >> n;
 
     vector<int> counts(101, 0);
-    cout << "Zadaj cisla: ";
 
     for (int i = 0; i < n; ++i) {
         int value;

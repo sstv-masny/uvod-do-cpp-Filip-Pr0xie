@@ -4,7 +4,6 @@
 using namespace std;
 int main() {
     long long y;
-    cout << "Zadaj rok: ";
     cin >> y;
     if (y % 4 == 0 && y % 100 != 0) {
         cout << "YES";

@@ -22,7 +22,6 @@ long long gcdll(long long a, long long b) {
 
 int main() {
     long long p, q;
-    cout << "Zadaj p, q: ";
     cin >> p >> q;
 
     long long d = gcdll(p, q);

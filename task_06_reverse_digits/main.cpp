@@ -3,7 +3,6 @@ using namespace std;
 
 int main() {
     unsigned long long n;
-    cout << "Zadaj n: ";
     cin >> n;
 
     long long opacne = 0;
